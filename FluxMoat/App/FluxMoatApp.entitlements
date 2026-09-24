@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Requires a Developer Team with the Network Extension capability
+	     and the App Group registered. Identifiers come from
+	     Config/Signing.xcconfig. -->
+	<key>com.apple.developer.networking.networkextension</key>
+	<array>
+		<string>packet-tunnel-provider</string>
+	</array>
+	<!-- Access Wi-Fi Information: NEHotspotNetwork.fetchCurrent (Wi-Fi auto
+	     profile) needs this entitlement even while the VPN is active;
+	     without it nehelper denies the request with result code 1. -->
+	<key>com.apple.developer.networking.wifi-info</key>
+	<true/>
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>$(FLUXMOAT_APP_GROUP)</string>
+	</array>
+	<!-- iCloud sync of configuration (rules and settings) to the private
+	     CloudKit database; never traffic history or credentials. App target
+	     only: the tunnel gets config from the rule snapshot and must not
+	     have CloudKit access. -->
+	<key>com.apple.developer.icloud-services</key>
+	<array>
+		<string>CloudKit</string>
+	</array>
+	<key>com.apple.developer.icloud-container-identifiers</key>
+	<array>
+		<string>$(FLUXMOAT_ICLOUD_CONTAINER)</string>
+	</array>
+</dict>
+</plist>

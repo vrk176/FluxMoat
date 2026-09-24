@@ -1,0 +1,18 @@
+// Signing and identifiers for your own build.
+//
+// Don't edit this file for a personal build. Create Signing.local.xcconfig
+// next to it (it's gitignored) and override what you need, for example:
+//
+//   DEVELOPMENT_TEAM = ABCDE12345
+//   FLUXMOAT_BUNDLE_PREFIX = com.yourname.fluxmoat
+//
+// The App Group and iCloud container follow the prefix, so one line is
+// usually enough. The app, tunnel and widget all read these values from
+// their Info.plist at runtime, so nothing in the Swift code needs changing.
+
+DEVELOPMENT_TEAM =
+FLUXMOAT_BUNDLE_PREFIX = com.example.fluxmoat
+FLUXMOAT_APP_GROUP = group.$(FLUXMOAT_BUNDLE_PREFIX)
+FLUXMOAT_ICLOUD_CONTAINER = iCloud.$(FLUXMOAT_BUNDLE_PREFIX)
+
+#include? "Signing.local.xcconfig"
