@@ -776,7 +776,7 @@ struct SettingsView: View {
     private var supportSection: some View {
                 Section {
                     if let helpURL = SupportCopy.helpURL {
-                        Link("Help & FAQ", destination: helpURL)
+                        Link("Help", destination: helpURL)
                     }
                     if let mailto = SupportCopy.supportMailto(
                         version: Bundle.main.versionLabel

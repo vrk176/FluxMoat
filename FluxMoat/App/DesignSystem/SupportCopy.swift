@@ -4,7 +4,7 @@ import Foundation
 /// the matching row is hidden when it's nil, so a missing address never shows
 /// up as a broken link.
 enum SupportCopy {
-    /// Help page (the project README). nil hides Settings' "Help & FAQ" row.
+    /// Help page (the project README). nil hides Settings' "Help" row.
     static let helpURL: URL? = URL(string: "https://github.com/vrk176/FluxMoat#readme")
 
     /// Support mailbox. nil hides Settings' "Contact support" row.
