@@ -4,14 +4,14 @@ import Foundation
 /// the matching row is hidden when it's nil, so a missing address never shows
 /// up as a broken link.
 enum SupportCopy {
-    /// Public help / FAQ page. nil hides Settings' "Help & FAQ" row.
-    static let helpURL: URL? = URL(string: "https://fluxmoat.hominexis.com/help.html")
+    /// Help page (the project README). nil hides Settings' "Help & FAQ" row.
+    static let helpURL: URL? = URL(string: "https://github.com/vrk176/FluxMoat#readme")
 
     /// Support mailbox. nil hides Settings' "Contact support" row.
     static let supportEmail: String? = "connect@hominexis.com"
 
-    /// Published privacy policy. nil hides the About row.
-    static let privacyPolicyURL: URL? = URL(string: "https://fluxmoat.hominexis.com/privacy.html")
+    /// Privacy section of the project README. nil hides the About row.
+    static let privacyPolicyURL: URL? = URL(string: "https://github.com/vrk176/FluxMoat#privacy")
 
     /// Discord invite. nil hides Settings' "Community" section. Invites can be
     /// revoked or expire, so set this to nil rather than ship a dead link.
